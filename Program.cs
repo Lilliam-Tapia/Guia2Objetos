@@ -50,7 +50,16 @@ namespace guia2Objetos
                 Console.WriteLine($"Empleaado con número {numeroEmpleadoCambiarEstado} no encontrado.");
             }
             // si no, se muestra el mensaje Empleado con número no encontrado. 
-
+            int numeroEmpleado = 101;
+            Empleado empleadoaumento = BuscarEmpleado(listaEmpleados, numeroEmpleado);
+            if (empleadoaumento != null)
+            {
+                empleadoaumento.Aumentarsalario(numeroEmpleado, 5);
+            }
+            else
+            {
+                Console.WriteLine($"Empleaado con número {numeroEmpleado} no encontrado.");
+            }
         }
         //método estatico
         //BuscarEmpleado toma dos argumentos; empleados de una lista de objetos de tipo Empleado

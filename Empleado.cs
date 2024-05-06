@@ -55,6 +55,18 @@ namespace guia2Objetos
                 Console.WriteLine("Estado no válido");
             }
         }
-
+        public void Aumentarsalario(int numeroEmpleado, decimal porcentaje)
+        {
+            if (this.numeroEmpleado == numeroEmpleado && porcentaje > 0)
+            {
+                decimal aumento = salario * (porcentaje / 100);
+                salario += aumento;
+                Console.WriteLine($"Salario del empleado número {numeroEmpleado} aumentado en {porcentaje}%. Nuevo salario {salario:c}");
+            }
+            else if (porcentaje <= 0)
+            {
+                Console.WriteLine("Porcentaje no válido");
+            }
+        }
     }
 }
